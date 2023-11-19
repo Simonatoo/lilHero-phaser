@@ -1,3 +1,11 @@
+let playerStatus = {
+    str: 1,
+    agi: 1,
+    dex: 1,
+    vit: 1,
+    luk: 1
+}
+
 class App extends Phaser.Scene {
     constructor() {
         super({ key: "app" });
@@ -8,6 +16,7 @@ class App extends Phaser.Scene {
     }
 
     create(){
+        this.registry.set('playerStatus', playerStatus);
         this.scene.start('menu');
     }
 }
@@ -15,7 +24,7 @@ class App extends Phaser.Scene {
 let config = new Phaser.Game({
     width: 1280,
     height: 720,
-    scene: [App, Menu],
+    scene: [App, Menu, NewChar],
     scale : {
         mode: Phaser.Scale.FIT
     },
