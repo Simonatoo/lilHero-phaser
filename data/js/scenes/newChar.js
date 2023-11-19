@@ -13,7 +13,10 @@ class NewChar extends Phaser.Scene {
         continueBtn.setOrigin(0.5, 0.5);
         continueBtn.setInteractive();
         continueBtn.on('pointerdown', () => {
-            //Direcionar o usuário para a tela do jogo
+            //Direcionar o usuário para a tela da história
+            this.scene.start('dialog', {
+                text: 'Em um passado sombrio, um jovem testemunhou sua cidade ser aniquilada por um impiedoso clã de ladrões e assassinos. Como único sobrevivente, vagou sem rumo para o Sul, descobrindo uma pacífica vila que se tornou seu refúgio. Determinado a restaurar o que foi perdido, iniciou intensos treinamentos na esperança de um dia retornar e reconstruir a cidade que um dia foi seu lar.'
+            });
         })
         
         title.setOrigin(0.5, 0.5);

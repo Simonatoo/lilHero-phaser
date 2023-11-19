@@ -24,7 +24,7 @@ class App extends Phaser.Scene {
 let config = new Phaser.Game({
     width: 1280,
     height: 720,
-    scene: [App, Menu, NewChar],
+    scene: [App, Menu, NewChar, Dialog],
     scale : {
         mode: Phaser.Scale.FIT
     },
