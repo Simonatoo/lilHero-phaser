@@ -6,12 +6,16 @@ class App extends Phaser.Scene {
     preload() {
         
     }
+
+    create(){
+        this.scene.start('menu');
+    }
 }
 
 let config = new Phaser.Game({
     width: 1280,
     height: 720,
-    scene: [App],
+    scene: [App, Menu],
     scale : {
         mode: Phaser.Scale.FIT
     },
