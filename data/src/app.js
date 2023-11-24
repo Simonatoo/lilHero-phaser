@@ -12,7 +12,7 @@ class App extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.image('back_button', '../assets/back_button.png');
     }
 
     create(){

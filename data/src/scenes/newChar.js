@@ -4,6 +4,7 @@ class NewChar extends Phaser.Scene {
     }
     
     create() {
+        const backBtn = new Navigation(this, 60, 60, 'back_button', 'menu');
         this.points = 5;
         this.playerStatus = this.registry.get('playerStatus');
         this.statusGroup = this.add.group();
@@ -21,7 +22,6 @@ class NewChar extends Phaser.Scene {
         
         title.setOrigin(0.5, 0.5);
         this.createStatusInterface();
-        this.justTest();
     }
 
     createStatusInterface() {
@@ -64,11 +64,5 @@ class NewChar extends Phaser.Scene {
 
     clearStatusInterface() {
         this.statusGroup.clear(true, true);
-    }
-
-    justTest() {
-        const testBtn = this.add.text(20, 20, 'botão para testes');
-        testBtn.setInteractive();
-        testBtn.on('pointerdown', () => console.log(this.playerStatus));
     }
 }
